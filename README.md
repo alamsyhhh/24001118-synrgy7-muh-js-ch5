@@ -2,26 +2,6 @@
 ## REST API Endpoints
 ### Hello World Test
 
-Test untuk memastikan REST API telah berjalan dengan baik.
-
-#### *HTTP Request*
-> **GET**   
-> `/api`
-
-#### *Default Request URL*
-
-    http://localhost:4000/api
-
-#### *Expected Response*
-Response Code: `200`  
-Response Type: `application/json`  
-Response Body:  
-
-    {
-	    "status": "success",
-	    "message": "Hello world"
-    }
-
 -----------------------
 ### Get All Car
 
@@ -33,7 +13,7 @@ Mengembalikan array berisi data mobil dari database.
 
 #### *Default Request URL*
 
-    http://localhost:4000/api/cars
+    http://localhost:9000/api/cars
 
 #### *Expected Response*
 Response Code: `200`  
@@ -41,7 +21,7 @@ Response Type: `application/json`
 Response Body:  
 
     {
-    	"status": "success",
+    	"status": "200",
     	"message": "Get all car data successfully",
     	"data": [
     		{
@@ -58,39 +38,7 @@ Response Body:
     }
 
 -----------------------
-### Get Car with ID
 
-Mengembalikan data car berdasarkan dengan ID dari database.
-
-#### *HTTP Request*
-> **GET**   
-> `/api/cars/{carId}`
-
-#### *Default Request URL*
-
-    http://localhost:4000/api/cars/{carId}
-
-#### *Expected Response*
-Response Code: `200`  
-Response Type: `application/json`   
-Response Body:  
-
-    {
-    	"status": "success",
-    	"message": "Get car data with id={carId} successfully",
-    	"data": {
-    		"id": number,
-    		"name": string,
-    		"size": string,
-    		"rent_per_day": number,
-    		"image_id": string,
-    		"image_url": string,
-    		"createdAt": timestamp,
-    		"updatedAt": timestamp
-    	}
-    }
-
------------------------
 ### Add New Car 
 
 Menambahkan data mobil baru ke database.
@@ -101,7 +49,7 @@ Menambahkan data mobil baru ke database.
 
 #### *Default Request URL*
 
-    http://localhost:4000/api/cars
+    http://localhost:9000/api/cars
 
 #### *Expected Request*
 Request Type: `application/json`  
@@ -152,7 +100,7 @@ Response Type: `application/json`
 Response Body:   
 
     {
-    	"status": "success",
+    	"status": "200",
     	"message": "Upload image successfully",
     	"url": string,
     	"public_id": string
@@ -219,15 +167,3 @@ Response Body:
     }
 
 -----------------------
-
-# Database Design
-
-Database proyek ini hanya menggunakan satu tabel saja karena kompleksitas data yang dibutuhkan sangat simpel. Berikut diagram yang mempresentasikan model data yang digunakan dalam aplikasi ini:
-  
-![Diagram model data yang digunakan](./readme-files/db-diagram.png) 
-  
-Adapun model data diatas dapat dipisah menjadi beberapa tabel, seperti dengan representasi ERD dibawah ini:  
-  
-![Complex ver. database design](./readme-files/db-diagram-2.png)
-  
-Implementasi tidak dilakukan dengan model ini dikarenakan kompleksitas code yang dibutuhkan nantinya akan semakin tinggi. Implementasi dilakukan dengan model satu tabel saja untuk mencegah kompleksitas kode tinggi yang unnecessary di aplikasi yang relatif simpel seperti ini.
