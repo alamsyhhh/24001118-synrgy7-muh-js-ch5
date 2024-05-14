@@ -1,6 +1,5 @@
 
 ## REST API Endpoints
-### Hello World Test
 
 -----------------------
 ### Get All Car
@@ -39,7 +38,7 @@ Response Body:
 
 -----------------------
 
-### Add New Car 
+### Cereate Car 
 
 Menambahkan data mobil baru ke database.
 
@@ -75,38 +74,7 @@ Response Body:
     }
 
 -----------------------
-### Add Car Image to Cloudinary
 
-Meng-upload car image ke Cloudinary lalu mengembalikan *public_id* dan *url* nya.
-
-#### *HTTP Request*
-> **POST**   
-> `/api/cars/picture/cloudinary`
-
-#### *Default Request URL*
-
-    http://localhost:4000/api/cars/picture/cloudinary
-
-#### *Expected Request*
-Request Type: `multipart/form-data`   
-Request Body:   
-
-    picture: file
-
-
-#### *Expected Response*
-Response Code: `201`   
-Response Type: `application/json`   
-Response Body:   
-
-    {
-    	"status": "200",
-    	"message": "Upload image successfully",
-    	"url": string,
-    	"public_id": string
-    }
-
------------------------
 ### Edit Car Data with ID 
 
 Mengedit data car berdasarkan ID nya di database.
