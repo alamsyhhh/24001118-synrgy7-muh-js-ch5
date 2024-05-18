@@ -582,13 +582,13 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
       - Request :
         ```
         curl --location 'http://localhost:9000/api/v1/cms/cars' \
-       --form 'name="test"' \
-       --form 'category="large"' \
-       --form 'price="10000"' \
-       --form 'image=@"/C:/Users/ASUS/Downloads/screencapture-localhost-8000-cars-2024-05-05-02_29_53.png"' \
-       --form 'image=@"/C:/Users/ASUS/Downloads/screencapture-localhost-8000-cars-2024-05-05-02_29_53.png"' \
-       --form 'startRent="2012/03/05"' \
-       --form 'finishRent="2012/04/05"'
+        --form 'name="test"' \
+        --form 'category="large"' \
+        --form 'price="10000"' \
+        --form 'image=@"/C:/Users/ASUS/Downloads/screencapture-localhost-8000-cars-2024-05-05-02_29_53.png"' \
+        --form 'image=@"/C:/Users/ASUS/Downloads/screencapture-localhost-8000-cars-2024-05-05-02_29_53.png"' \
+        --form 'startRent="2012/03/05"' \
+        --form 'finishRent="2012/04/05"'
         ```
       - Response :
         ```
