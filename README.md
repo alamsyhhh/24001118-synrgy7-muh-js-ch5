@@ -23,7 +23,7 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
 |---------------------------|----------|------------------------|
 | `api/v1/cms/api/cars`     |   `GET`  | Get All Data Cars      |
 | `api/v1/cms/api/cars/:id` |   `GET`  | Get By Id Data Cars    |
-| `api/v1/cms/api/cars/`    |  `POST`  | Post Data Cars         |
+| `api/v1/cms/api/cars/`    |  `POST`  | Create Data Cars       |
 | `api/v1/cms/api/cars/:id` |   `PUT`  | Update Data Cars By Id |
 | `api/v1/cms/api/cars/:id` | `DELETE` | Delete Data Cars By Id |
 
@@ -38,16 +38,16 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
     - **Get Data Success**
         - Request :
           ```
-          curl -i --location 'http://localhost:9000/api/cars'
+          curl --location 'http://localhost:9000/api/v1/cms/cars'
           ```
         - Response :
           ```
           HTTP/1.1 200 OK
           X-Powered-By: Express
           Content-Type: application/json; charset=utf-8
-          Content-Length: 1578
-          ETag: W/"62a-gLb8gOcDaSFgSle5SRl90LssCM8"
-          Date: Fri, 17 May 2024 12:32:10 GMT
+          Content-Length: 3435
+          ETag: W/"d6b-nRkKBNBKlg+I6QJt9zbZuMW1d34"
+          Date: Sat, 18 May 2024 17:09:57 GMT
           Connection: keep-alive
           Keep-Alive: timeout=5
 
@@ -190,17 +190,16 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
     - **Get Data Success**
         - Request :
           ```
-          curl -i --location 'http://localhost:9000/api/cars?name=Ferrari'
-          --form 'name="Ferrari"' \
+          curl --location 'http://localhost:9000/api/v1/cms/cars?name=Ferrari'
           ```
         - Response :
           ```
           HTTP/1.1 200 OK
           X-Powered-By: Express
           Content-Type: application/json; charset=utf-8
-          Content-Length: 1578
-          ETag: W/"62a-gLb8gOcDaSFgSle5SRl90LssCM8"
-          Date: Fri, 17 May 2024 12:32:10 GMT
+          Content-Length: 391
+          ETag: W/"187-8eVulT+C7Zew15Au5bC3/mM4PjA"
+          Date: Sat, 18 May 2024 17:15:28 GMT
           Connection: keep-alive
           Keep-Alive: timeout=5
 
@@ -234,17 +233,16 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
     - **Get Data Success**
         - Request :
           ```
-          curl -i --location 'http://localhost:9000/api/cars?category=large'
-          --form 'category="large"' \
+          curl --location 'http://localhost:9000/api/v1/cms/cars?category=large'
           ```
         - Response :
           ```
           HTTP/1.1 200 OK
           X-Powered-By: Express
           Content-Type: application/json; charset=utf-8
-          Content-Length: 1578
-          ETag: W/"62a-gLb8gOcDaSFgSle5SRl90LssCM8"
-          Date: Fri, 17 May 2024 12:32:10 GMT
+          Content-Length: 1314
+          ETag: W/"522-8jjnfGXXVzc/gkQZTAtnRZgHOgc"
+          Date: Sat, 18 May 2024 17:16:21 GMT
           Connection: keep-alive
           Keep-Alive: timeout=5
 
@@ -312,18 +310,16 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
     - **Get Data Success**
         - Request :
           ```
-          curl -i --location 'http://localhost:9000/api/cars?page=1&pageSize=10'
-          --form 'page=1' \
-          --form 'pageSize=10' \
+          curl --location 'http://localhost:9000/api/v1/cms/cars?page=1&pageSize=10'
           ```
         - Response :
           ```
           HTTP/1.1 200 OK
           X-Powered-By: Express
           Content-Type: application/json; charset=utf-8
-          Content-Length: 1578
-          ETag: W/"62a-gLb8gOcDaSFgSle5SRl90LssCM8"
-          Date: Fri, 17 May 2024 12:32:10 GMT
+          Content-Length: 3148
+          ETag: W/"c4c-V46yHCfeEqcvGcS1bzGcC9bbEuo"
+          Date: Sat, 18 May 2024 17:17:02 GMT
           Connection: keep-alive
           Keep-Alive: timeout=5
 
@@ -457,16 +453,16 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
     - **Get Data Success**
         - Request :
           ```
-          curl -i --location 'http://localhost:9000/api/v1/cms/cars/ffeb9e55-22a8-46c8-856b-75061b23b67c'
+          curl --location 'http://localhost:9000/api/v1/cms/cars/ffeb9e55-22a8-46c8-856b-75061b23b67c'
           ```
         - Response :
           ```
           HTTP/1.1 200 OK
           X-Powered-By: Express
           Content-Type: application/json; charset=utf-8
-          Content-Length: 376
-          ETag: W/"178-b6opYxiDk80e5+AAGPg4qX9nJLA"
-          Date: Fri, 17 May 2024 12:36:11 GMT
+          Content-Length: 368
+          ETag: W/"170-ZHiUxMyt15IW5oQuMQ8PY36r2KI"
+          Date: Sat, 18 May 2024 17:18:41 GMT
           Connection: keep-alive
           Keep-Alive: timeout=5
             
@@ -496,9 +492,9 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
           HTTP/1.1 404 Not Found
           X-Powered-By: Express
           Content-Type: application/json; charset=utf-8
-          Content-Length: 58
-          ETag: W/"3a-gTtqnTGREXP4BJs51/vy+a6TNb4"
-          Date: Fri, 17 May 2024 12:35:58 GMT
+          Content-Length: 62
+          ETag: W/"3e-KYeLGRwzHcH3cqYBxhq/ZE6xO14"
+          Date: Sat, 18 May 2024 17:19:46 GMT
           Connection: keep-alive
           Keep-Alive: timeout=5
             
@@ -510,7 +506,7 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
 -----------------------
 ### Create Car 
 
-- **Insert Data Cars**
+- **Insert Data Car**
     - **Request**
         - Endpoint : `/api/v1/cms/cars`
         - Body : `form-data`
@@ -518,22 +514,22 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
     - **Post Data Success**
         - Request :
           ```
-          curl -i --location 'http://localhost:9000/api/v1/cms/cars' \
-          --form 'name="Ferrari"' \
-          --form 'category="small"' \
-          --form 'price=200000' \
-          --form 'image=@"/Binar X Synrgy/Challenge/week5/challenge5/Cars.png"' \
-          --form 'startRent="2024-05-14"' \
-          --form 'finishRent="2024-05-20"
+          curl --location 'http://localhost:9000/api/v1/cms/cars' \
+          --form 'name="test"' \
+          --form 'category="large"' \
+          --form 'price="dd"' \
+          --form 'image=@"/C:/Users/ASUS/Downloads/screencapture-localhost-8000-cars-2024-05-05-02_29_53.png"' \
+          --form 'startRent="2012/03/05"' \
+          --form 'finishRent="2012/04/05"'
           ```
         - Response :
           ```
           HTTP/1.1 201 Created
           X-Powered-By: Express
           Content-Type: application/json; charset=utf-8
-          Content-Length: 47
-          ETag: W/"2f-LdQQAk62aBAQzFF4NIUb4PwDFZA"
-          Date: Fri, 17 May 2024 12:41:36 GMT
+          Content-Length: 420
+          ETag: W/"1a4-w4G+vCXEoPg106chwpPDp3b5Ad8"
+          Date: Sat, 18 May 2024 17:22:21 GMT
           Connection: keep-alive
           Keep-Alive: timeout=5
             
@@ -555,24 +551,24 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
           ```
           
    - **Post Data Failed Validation (type data image not valid)**
-      - cURL Request :
+      - Request :
         ```
         curl -i --location 'http://localhost:9000/api/v1/cms/cars' \
           --form 'name="Ferrari"' \
           --form 'category="small"' \
           --form 'price=200000' \
-          --form 'image=@"/Binar X Synrgy/Challenge/week5/challenge5/Cars.pdf"' \
+          --form 'image=@"/C:/Users/ASUS/Downloads/Cetak Kartu Rencana Studi - Portal UAD (2).pdf"' \
           --form 'startRent="2024-05-14"' \
           --form 'finishRent="2024-05-20"
         ```
-      - cURL Response :
+      - Response :
         ```
         HTTP/1.1 400 Bad Request
         X-Powered-By: Express
         Content-Type: application/json; charset=utf-8
-        Content-Length: 99
-        ETag: W/"63-nQr/u/GYe6C7h74yvdRsVjbj4o8"
-        Date: Fri, 17 May 2024 12:28:54 GMT
+        Content-Length: 87
+        ETag: W/"57-SPQIwdH1ydiLSja/x2IoAXN+2g4"
+        Date: Sat, 18 May 2024 17:23:13 GMT
         Connection: keep-alive
         Keep-Alive: timeout=5
         
@@ -583,25 +579,25 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
         ```
 
  - **Post Data Failed Validation (multiple image)**
-      - cURL Request :
+      - Request :
         ```
-        curl -i --location 'http://localhost:9000/api/v1/cms/cars' \
-          --form 'name="Ferrari"' \
-          --form 'category="small"' \
-          --form 'price=200000' \
-          --form 'image=@"/Binar X Synrgy/Challenge/week5/challenge5/Cars.img"' \
-          --form 'image=@"/Binar X Synrgy/Challenge/week5/challenge5/Cars2.img"' \
-          --form 'startRent="2024-05-14"' \
-          --form 'finishRent="2024-05-20"
+        curl --location 'http://localhost:9000/api/v1/cms/cars' \
+       --form 'name="test"' \
+       --form 'category="large"' \
+       --form 'price="10000"' \
+       --form 'image=@"/C:/Users/ASUS/Downloads/screencapture-localhost-8000-cars-2024-05-05-02_29_53.png"' \
+       --form 'image=@"/C:/Users/ASUS/Downloads/screencapture-localhost-8000-cars-2024-05-05-02_29_53.png"' \
+       --form 'startRent="2012/03/05"' \
+       --form 'finishRent="2012/04/05"'
         ```
-      - cURL Response :
+      - Response :
         ```
         HTTP/1.1 400 Bad Request
         X-Powered-By: Express
         Content-Type: application/json; charset=utf-8
-        Content-Length: 99
-        ETag: W/"63-nQr/u/GYe6C7h74yvdRsVjbj4o8"
-        Date: Fri, 17 May 2024 12:28:54 GMT
+        Content-Length: 75
+        ETag: W/"4b-1itSLJbI+moDHOpfQ2cqcWxuJDM"
+        Date: Sat, 18 May 2024 17:25:12 GMT
         Connection: keep-alive
         Keep-Alive: timeout=5
         
@@ -614,22 +610,22 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
     - **Post Data Failed**
       - Request :
         ```
-        curl -i --location 'http://localhost:9000/api/v1/cms/cars' \
-          --form 'name="Ferrari"' \
-          --form 'category="small"' \
-          --form 'price=200000' \
-          --form 'image=@"/Binar X Synrgy/Challenge/week5/challenge5/Cars.img"' \
-          --form 'startRent="2024-05-14"' \
-          --form 'finishRent="2024-05-20"
+        curl --location 'http://localhost:9000/api/v1/cms/cars' \
+        --form 'name="test"' \
+        --form 'category="large"' \
+        --form 'price="rr"' \
+        --form 'image=@"/C:/Users/ASUS/Downloads/screencapture-localhost-8000-cars-2024-05-05-02_29_53.png"' \
+        --form 'startRent="2012/03/05"' \
+        --form 'finishRent="2012/04/05"'
         ```
       - Response :
         ```
-        HTTP/1.1 500 Bad Request
+        HTTP/1.1 500 Internal Server Error
         X-Powered-By: Express
         Content-Type: application/json; charset=utf-8
-        Content-Length: 99
-        ETag: W/"63-nQr/u/GYe6C7h74yvdRsVjbj4o8"
-        Date: Fri, 17 May 2024 12:28:54 GMT
+        Content-Length: 48
+        ETag: W/"30-tWHkHI2xOr172yUbsPL0eLhF93U"
+        Date: Sat, 18 May 2024 17:26:19 GMT
         Connection: keep-alive
         Keep-Alive: timeout=5
         
@@ -650,22 +646,22 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
     - **Update Data Success**
         - Request :
           ```
-          curl -i --location --request PUT 'http://localhost:9000/api/cars/e9b52c80-0589-4d4c-abe3-7e86e7da63c3' \
-          --form 'name="Ferrari"' \
-          --form 'category="large"' \
-          --form 'price=500000' \
-          --form 'image=@"/Binar X Synrgy/Challenge/week5/challenge5/Cars3.img"' \
-          --form 'startRent="2024-06-14"' \
-          --form 'finishRent="2024-06-20"
+          curl --location --request PUT 'http://localhost:9000/api/v1/cms/cars/e9b52c80-0589-4d4c-abe3-7e86e7da63c3' \
+          --form 'name="test 2"' \
+          --form 'category="roro"' \
+          --form 'price="1010"' \
+          --form 'image=@"/C:/Users/ASUS/Downloads/screencapture-localhost-8000-cars-2024-05-05-02_29_53.png"' \
+          --form 'startRent="2021/04/02"' \
+          --form 'finishRent="2022/05/03"'
           ```
-        - cURL Response :
+        - Response :
           ```
           HTTP/1.1 200 OK
           X-Powered-By: Express
           Content-Type: application/json; charset=utf-8
-          Content-Length: 45
-          ETag: W/"2d-cTE+Ikc4NElJjwc0HACja5VFHDo"
-          Date: Fri, 17 May 2024 12:49:11 GMT
+          Content-Length: 420
+          ETag: W/"1a4-1kp1r3/LSquFsMSLYkKUQjUD/UY"
+          Date: Sat, 18 May 2024 17:29:16 GMT
           Connection: keep-alive
           Keep-Alive: timeout=5
             
@@ -686,24 +682,24 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
           }
           ```
     - **Update Data Failed Not Found**
-        - cURL Request :
+        - Request :
           ```
-          curl -i --location --request PUT 'http://localhost:9000/api/v1/cms/cars/e9b52c80-0589-4d4c-abe3-7e86e7da63c' \
-          --form 'name="Ferrari"' \
-          --form 'category="large"' \
-          --form 'price=500000' \
-          --form 'image=@"/Binar X Synrgy/Challenge/week5/challenge5/Cars3.img"' \
-          --form 'startRent="2024-06-14"' \
-          --form 'finishRent="2024-06-20"
+          curl --location --request PUT 'http://localhost:9000/api/v1/cms/cars/e9b52c80-0589-4d4c-abe3-7e86e7da63c' \
+          --form 'name="test 2"' \
+          --form 'category="roro"' \
+          --form 'price="1010"' \
+          --form 'image=@"/C:/Users/ASUS/Downloads/screencapture-localhost-8000-cars-2024-05-05-02_29_53.png"' \
+          --form 'startRent="2021/04/02"' \
+          --form 'finishRent="2022/05/03"'
           ```
-        - cURL Response :
+        - Response :
           ```
           HTTP/1.1 404 Not Found
           X-Powered-By: Express
           Content-Type: application/json; charset=utf-8
-          Content-Length: 58
-          ETag: W/"3a-gTtqnTGREXP4BJs51/vy+a6TNb4"
-          Date: Fri, 17 May 2024 12:55:34 GMT
+          Content-Length: 62
+          ETag: W/"3e-KYeLGRwzHcH3cqYBxhq/ZE6xO14"
+          Date: Sat, 18 May 2024 17:30:10 GMT
           Connection: keep-alive
           Keep-Alive: timeout=5
         
@@ -716,22 +712,22 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
    - **Update Data Failed**
       - Request :
         ```
-        curl -i --location 'http://localhost:9000/api/v1/cms/cars/e9b52c80-0589-4d4c-abe3-7e86e7da63c3' \
-          --form 'name="Ferrari"' \
-          --form 'category="small"' \
-          --form 'price=200000' \
-          --form 'image=@"/Binar X Synrgy/Challenge/week5/challenge5/Cars.img"' \
-          --form 'startRent="2024-05-14"' \
-          --form 'finishRent="2024-05-20"
+        curl --location --request PUT 'http://localhost:9000/api/v1/cms/cars/e9b52c80-0589-4d4c-abe3-7e86e7da63c3' \
+          --form 'name="test 2"' \
+          --form 'category="roro"' \
+          --form 'price="1010"' \
+          --form 'image=@"/C:/Users/ASUS/Downloads/screencapture-localhost-8000-cars-2024-05-05-02_29_53.png"' \
+          --form 'startRent="2021/04/02"' \
+          --form 'finishRent="2022/05/03"'
         ```
       - Response :
         ```
-        HTTP/1.1 500 Bad Request
+        HTTP/1.1 500 Internal Server Error
         X-Powered-By: Express
         Content-Type: application/json; charset=utf-8
-        Content-Length: 99
-        ETag: W/"63-nQr/u/GYe6C7h74yvdRsVjbj4o8"
-        Date: Fri, 17 May 2024 12:28:54 GMT
+        Content-Length: 48
+        ETag: W/"30-tWHkHI2xOr172yUbsPL0eLhF93U"
+        Date: Sat, 18 May 2024 17:31:46 GMT
         Connection: keep-alive
         Keep-Alive: timeout=5
         
@@ -749,18 +745,18 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
         - Parameter : `:id`
         - Method : `DELETE`
     - **Delete Data Success**
-        - cURL Request :
+        - Request :
           ```
-          curl -i --location --request DELETE 'http://localhost:9000/api/v1/cms/cars/e9b52c80-0589-4d4c-abe3-7e86e7da63c3'
+          curl --location --request DELETE 'http://localhost:9000/api/v1/cms/cars/838745ea-bf05-47c7-89e4-aaebeb4aedaa'
           ```
-        - cURL Response :
+        - Response :
           ```
           HTTP/1.1 200 OK
           X-Powered-By: Express
           Content-Type: application/json; charset=utf-8
-          Content-Length: 47
-          ETag: W/"2f-VermmVfFxSAuCtushH6PQN5igHU"
-          Date: Fri, 17 May 2024 13:15:45 GMT
+          Content-Length: 48
+          ETag: W/"30-omuH3S85tyc+9xA5vN1eCtNp1sg"
+          Date: Sat, 18 May 2024 17:33:09 GMT
           Connection: keep-alive
           Keep-Alive: timeout=5
             
@@ -770,18 +766,18 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
           }
           ```
     - **Delete Data Not Found**
-       - cURL Request :
+       - Request :
          ```
          curl -i --location --request DELETE 'http://localhost:9000/api/v1/cms/cars/http://localhost:9000/api/v1/cms/cars/e9b52c80-0589-4d4c-abe3-7e86e7da63c'
          ```
-       - cURL Response :
+       - Response :
          ```
          HTTP/1.1 404 Not Found
          X-Powered-By: Express
          Content-Type: application/json; charset=utf-8
-         Content-Length: 58
-         ETag: W/"3a-gTtqnTGREXP4BJs51/vy+a6TNb4"
-         Date: Fri, 17 May 2024 13:17:55 GMT
+         Content-Length: 62
+         ETag: W/"3e-KYeLGRwzHcH3cqYBxhq/ZE6xO14"
+         Date: Sat, 18 May 2024 17:33:36 GMT
          Connection: keep-alive
          Keep-Alive: timeout=5
             
