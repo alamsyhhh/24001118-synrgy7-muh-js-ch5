@@ -52,123 +52,400 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
           Keep-Alive: timeout=5
 
           {
+             "status": 200,
+             "message": "Get all car data successfully",
+             "data": {
+                 "cars": [
+                     {
+                         "id": "3d71f905-cd6d-447c-86e6-c5cb19159a45",
+                         "name": "Nissan Altima",
+                         "category": "Medium",
+                         "price": 10000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.567Z",
+                         "updatedAt": "2024-05-18T13:32:02.567Z"
+                     },
+                     {
+                         "id": "fb4b1e5c-4add-470d-9a2c-d1bdcce4fb38",
+                         "name": "Chevrolet Camaro",
+                         "category": "Small",
+                         "price": 100.05,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.567Z",
+                         "updatedAt": "2024-05-18T13:32:02.567Z"
+                     },
+                     {
+                         "id": "06b34192-0936-4b96-a859-85f20d2b08c5",
+                         "name": "Volkswagen Golf",
+                         "category": "large",
+                         "price": 20000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.567Z",
+                         "updatedAt": "2024-05-18T13:32:02.567Z"
+                     },
+                     {
+                         "id": "8d2035fe-abe0-46eb-9b7a-40369e9132ce",
+                         "name": "Tesla Model S",
+                         "category": "Small",
+                         "price": 30000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.567Z",
+                         "updatedAt": "2024-05-18T13:32:02.567Z"
+                     },
+                     {
+                         "id": "ba2204d7-0728-4131-85a6-cf88ead91074",
+                         "name": "BMW X5",
+                         "category": "large",
+                         "price": 400.05,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.567Z",
+                         "updatedAt": "2024-05-18T13:32:02.567Z"
+                     },
+                     {
+                         "id": "a72a6697-ade3-442a-9f49-3debe9d5aaa1",
+                         "name": "Audi Q7",
+                         "category": "small",
+                         "price": 50.05,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.568Z",
+                         "updatedAt": "2024-05-18T13:32:02.568Z"
+                     },
+                     {
+                         "id": "76115319-b08b-48c5-858f-7a6c3d454f98",
+                         "name": "Mercedes-Benz C-Class",
+                         "category": "large",
+                         "price": 500000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.568Z",
+                         "updatedAt": "2024-05-18T13:32:02.568Z"
+                     },
+                     {
+                         "id": "dcef4300-21f7-4fcf-afe3-30cbc174e25f",
+                         "name": "Toyota RAV4",
+                         "category": "medium",
+                         "price": 30000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.568Z",
+                         "updatedAt": "2024-05-18T13:32:02.568Z"
+                     },
+                     {
+                         "id": "ffeb9e55-22a8-46c8-856b-75061b23b67c",
+                         "name": "Ford F-150",
+                         "category": "small",
+                         "price": 30000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.568Z",
+                         "updatedAt": "2024-05-18T13:32:02.568Z"
+                     },
+                     {
+                         "id": "5ccdb6ec-6d09-410f-9618-0b301e80a875",
+                         "name": "Honda Accord",
+                         "category": "small",
+                         "price": 40000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.568Z",
+                         "updatedAt": "2024-05-18T13:32:02.568Z"
+                     },
+                     {
+                         "id": "9eb35667-f923-4940-a4cf-3cd8db99b00e",
+                         "name": "ferrari",
+                         "category": "large",
+                         "price": 4000000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.568Z",
+                         "updatedAt": "2024-05-18T13:32:02.568Z"
+                     }
+                 ]
+             }
+          }
+          ```
+
+   - **Show All Data Cars By Name**
+    - **Request** 
+        - Endpoint : `/api/v1/cms/cars`
+        - Params : `name`
+        - method : `GET`
+    - **Get Data Success**
+        - Request :
+          ```
+          curl -i --location 'http://localhost:9000/api/cars?name=Ferrari'
+          --form 'name="Ferrari"' \
+          ```
+        - Response :
+          ```
+          HTTP/1.1 200 OK
+          X-Powered-By: Express
+          Content-Type: application/json; charset=utf-8
+          Content-Length: 1578
+          ETag: W/"62a-gLb8gOcDaSFgSle5SRl90LssCM8"
+          Date: Fri, 17 May 2024 12:32:10 GMT
+          Connection: keep-alive
+          Keep-Alive: timeout=5
+
+            {
                 "status": 200,
                 "message": "Get all car data successfully",
                 "data": {
                     "cars": [
                         {
-                            "id": "3d71f905-cd6d-447c-86e6-c5cb19159a45",
-                            "name": "Nissan Altima",
-                            "category": "Medium",
-                            "price": 10000,
-                            "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
-                            "startRent": null,
-                            "finishRent": null,
-                            "createdAt": "2024-05-18T13:32:02.567Z",
-                            "updatedAt": "2024-05-18T13:32:02.567Z"
-                        },
-                        {
-                            "id": "fb4b1e5c-4add-470d-9a2c-d1bdcce4fb38",
-                            "name": "Chevrolet Camaro",
-                            "category": "Small",
-                            "price": 100.05,
-                            "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
-                            "startRent": null,
-                            "finishRent": null,
-                            "createdAt": "2024-05-18T13:32:02.567Z",
-                            "updatedAt": "2024-05-18T13:32:02.567Z"
-                        },
-                        {
-                            "id": "06b34192-0936-4b96-a859-85f20d2b08c5",
-                            "name": "Volkswagen Golf",
+                            "id": "9eb35667-f923-4940-a4cf-3cd8db99b00e",
+                            "name": "ferrari",
                             "category": "large",
-                            "price": 20000,
-                            "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
-                            "startRent": null,
-                            "finishRent": null,
-                            "createdAt": "2024-05-18T13:32:02.567Z",
-                            "updatedAt": "2024-05-18T13:32:02.567Z"
-                        },
-                        {
-                            "id": "8d2035fe-abe0-46eb-9b7a-40369e9132ce",
-                            "name": "Tesla Model S",
-                            "category": "Small",
-                            "price": 30000,
-                            "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
-                            "startRent": null,
-                            "finishRent": null,
-                            "createdAt": "2024-05-18T13:32:02.567Z",
-                            "updatedAt": "2024-05-18T13:32:02.567Z"
-                        },
-                        {
-                            "id": "ba2204d7-0728-4131-85a6-cf88ead91074",
-                            "name": "BMW X5",
-                            "category": "large",
-                            "price": 400.05,
-                            "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
-                            "startRent": null,
-                            "finishRent": null,
-                            "createdAt": "2024-05-18T13:32:02.567Z",
-                            "updatedAt": "2024-05-18T13:32:02.567Z"
-                        },
-                        {
-                            "id": "a72a6697-ade3-442a-9f49-3debe9d5aaa1",
-                            "name": "Audi Q7",
-                            "category": "small",
-                            "price": 50.05,
+                            "price": 4000000,
                             "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
                             "startRent": null,
                             "finishRent": null,
                             "createdAt": "2024-05-18T13:32:02.568Z",
                             "updatedAt": "2024-05-18T13:32:02.568Z"
-                        },
-                        {
-                            "id": "76115319-b08b-48c5-858f-7a6c3d454f98",
-                            "name": "Mercedes-Benz C-Class",
-                            "category": "large",
-                            "price": 500000,
-                            "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
-                            "startRent": null,
-                            "finishRent": null,
-                            "createdAt": "2024-05-18T13:32:02.568Z",
-                            "updatedAt": "2024-05-18T13:32:02.568Z"
-                        },
-                        {
-                            "id": "dcef4300-21f7-4fcf-afe3-30cbc174e25f",
-                            "name": "Toyota RAV4",
-                            "category": "medium",
-                            "price": 30000,
-                            "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
-                            "startRent": null,
-                            "finishRent": null,
-                            "createdAt": "2024-05-18T13:32:02.568Z",
-                            "updatedAt": "2024-05-18T13:32:02.568Z"
-                        },
-                        {
-                            "id": "ffeb9e55-22a8-46c8-856b-75061b23b67c",
-                            "name": "Ford F-150",
-                            "category": "small",
-                            "price": 30000,
-                            "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
-                            "startRent": null,
-                            "finishRent": null,
-                            "createdAt": "2024-05-18T13:32:02.568Z",
-                            "updatedAt": "2024-05-18T13:32:02.568Z"
-                        },
-                        {
-                            "id": "5ccdb6ec-6d09-410f-9618-0b301e80a875",
-                            "name": "Honda Accord",
-                            "category": "small",
-                            "price": 40000,
-                            "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
-                            "startRent": null,
-                            "finishRent": null,
-                            "createdAt": "2024-05-18T13:32:02.568Z",
-                            "updatedAt": "2024-05-18T13:32:02.568Z"
-                        },
-                    ]
+                        }
+                    ],
+                    "totalPages": 1
                 }
             }
+          ```
+
+  - **Show All Data Cars By Category**
+    - **Request** 
+        - Endpoint : `/api/v1/cms/cars`
+        - Params : `category`
+        - method : `GET`
+    - **Get Data Success**
+        - Request :
+          ```
+          curl -i --location 'http://localhost:9000/api/cars?category=large'
+          --form 'category="large"' \
+          ```
+        - Response :
+          ```
+          HTTP/1.1 200 OK
+          X-Powered-By: Express
+          Content-Type: application/json; charset=utf-8
+          Content-Length: 1578
+          ETag: W/"62a-gLb8gOcDaSFgSle5SRl90LssCM8"
+          Date: Fri, 17 May 2024 12:32:10 GMT
+          Connection: keep-alive
+          Keep-Alive: timeout=5
+
+            {
+             "status": 200,
+             "message": "Get all car data successfully",
+             "data": {
+                 "cars": [
+                     {
+                         "id": "06b34192-0936-4b96-a859-85f20d2b08c5",
+                         "name": "Volkswagen Golf",
+                         "category": "large",
+                         "price": 20000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.567Z",
+                         "updatedAt": "2024-05-18T13:32:02.567Z"
+                     },
+                     {
+                         "id": "ba2204d7-0728-4131-85a6-cf88ead91074",
+                         "name": "BMW X5",
+                         "category": "large",
+                         "price": 400.05,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.567Z",
+                         "updatedAt": "2024-05-18T13:32:02.567Z"
+                     },
+                     {
+                         "id": "76115319-b08b-48c5-858f-7a6c3d454f98",
+                         "name": "Mercedes-Benz C-Class",
+                         "category": "large",
+                         "price": 500000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.568Z",
+                         "updatedAt": "2024-05-18T13:32:02.568Z"
+                     },
+                     {
+                         "id": "9eb35667-f923-4940-a4cf-3cd8db99b00e",
+                         "name": "ferrari",
+                         "category": "large",
+                         "price": 4000000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.568Z",
+                         "updatedAt": "2024-05-18T13:32:02.568Z"
+                     }
+                 ],
+                 "totalPages": 1
+             }
+          }
+          ```
+
+   - **Show All Data Cars With Pagination**
+    - **Request** 
+        - Endpoint : `/api/v1/cms/cars`
+        - Params : `page`
+                 : `pageSize`
+        - method : `GET`
+    - **Get Data Success**
+        - Request :
+          ```
+          curl -i --location 'http://localhost:9000/api/cars?page=1&pageSize=10'
+          --form 'page=1' \
+          --form 'pageSize=10' \
+          ```
+        - Response :
+          ```
+          HTTP/1.1 200 OK
+          X-Powered-By: Express
+          Content-Type: application/json; charset=utf-8
+          Content-Length: 1578
+          ETag: W/"62a-gLb8gOcDaSFgSle5SRl90LssCM8"
+          Date: Fri, 17 May 2024 12:32:10 GMT
+          Connection: keep-alive
+          Keep-Alive: timeout=5
+
+            {
+             "status": 200,
+             "message": "Get all car data successfully",
+             "data": {
+                 "cars": [
+                     {
+                         "id": "3d71f905-cd6d-447c-86e6-c5cb19159a45",
+                         "name": "Nissan Altima",
+                         "category": "Medium",
+                         "price": 10000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.567Z",
+                         "updatedAt": "2024-05-18T13:32:02.567Z"
+                     },
+                     {
+                         "id": "fb4b1e5c-4add-470d-9a2c-d1bdcce4fb38",
+                         "name": "Chevrolet Camaro",
+                         "category": "Small",
+                         "price": 100.05,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.567Z",
+                         "updatedAt": "2024-05-18T13:32:02.567Z"
+                     },
+                     {
+                         "id": "06b34192-0936-4b96-a859-85f20d2b08c5",
+                         "name": "Volkswagen Golf",
+                         "category": "large",
+                         "price": 20000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.567Z",
+                         "updatedAt": "2024-05-18T13:32:02.567Z"
+                     },
+                     {
+                         "id": "8d2035fe-abe0-46eb-9b7a-40369e9132ce",
+                         "name": "Tesla Model S",
+                         "category": "Small",
+                         "price": 30000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.567Z",
+                         "updatedAt": "2024-05-18T13:32:02.567Z"
+                     },
+                     {
+                         "id": "ba2204d7-0728-4131-85a6-cf88ead91074",
+                         "name": "BMW X5",
+                         "category": "large",
+                         "price": 400.05,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.567Z",
+                         "updatedAt": "2024-05-18T13:32:02.567Z"
+                     },
+                     {
+                         "id": "a72a6697-ade3-442a-9f49-3debe9d5aaa1",
+                         "name": "Audi Q7",
+                         "category": "small",
+                         "price": 50.05,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.568Z",
+                         "updatedAt": "2024-05-18T13:32:02.568Z"
+                     },
+                     {
+                         "id": "76115319-b08b-48c5-858f-7a6c3d454f98",
+                         "name": "Mercedes-Benz C-Class",
+                         "category": "large",
+                         "price": 500000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.568Z",
+                         "updatedAt": "2024-05-18T13:32:02.568Z"
+                     },
+                     {
+                         "id": "dcef4300-21f7-4fcf-afe3-30cbc174e25f",
+                         "name": "Toyota RAV4",
+                         "category": "medium",
+                         "price": 30000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.568Z",
+                         "updatedAt": "2024-05-18T13:32:02.568Z"
+                     },
+                     {
+                         "id": "ffeb9e55-22a8-46c8-856b-75061b23b67c",
+                         "name": "Ford F-150",
+                         "category": "small",
+                         "price": 30000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.568Z",
+                         "updatedAt": "2024-05-18T13:32:02.568Z"
+                     },
+                     {
+                         "id": "5ccdb6ec-6d09-410f-9618-0b301e80a875",
+                         "name": "Honda Accord",
+                         "category": "small",
+                         "price": 40000,
+                         "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1710400118/img_car_lhk3me.png",
+                         "startRent": null,
+                         "finishRent": null,
+                         "createdAt": "2024-05-18T13:32:02.568Z",
+                         "updatedAt": "2024-05-18T13:32:02.568Z"
+                     }
+                 ],
+                 "totalPages": 2
+             }
+          }
           ```
 -----------------------
 ### Get Car by ID
