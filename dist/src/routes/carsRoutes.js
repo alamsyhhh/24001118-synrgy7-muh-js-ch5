@@ -9,8 +9,8 @@ const carsController_1 = __importDefault(require("../controllers/carsController"
 const multer_1 = __importDefault(require("../middlewares/multer"));
 const router = express_1.default.Router();
 exports.carRoutes = router;
-router.get('/getAllCars', carsController_1.default.getAllCars);
-router.get('/getDetailCar/:id', carsController_1.default.getCarById);
-router.post('/createCar', multer_1.default.single('image'), carsController_1.default.createCar);
-router.put('/updateCar/:id', multer_1.default.single('image'), carsController_1.default.updateCar);
-router.delete('/deleteCar/:id', carsController_1.default.deleteCar);
+router.get('/cars', carsController_1.default.getAllCars);
+router.get('/cars/:id', carsController_1.default.getCarById);
+router.post('/Cars', multer_1.default.single('image'), carsController_1.default.createCar);
+router.put('/cars/:id', multer_1.default.single('image'), carsController_1.default.updateCar);
+router.delete('/cars/:id', carsController_1.default.deleteCar);

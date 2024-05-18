@@ -4,10 +4,10 @@ import upload from '../middlewares/multer';
 
 const router: Router = express.Router();
 
-router.get('/getAllCars', carController.getAllCars);
-router.get('/getDetailCar/:id', carController.getCarById);
-router.post('/createCar', upload.single('image'), carController.createCar);
-router.put('/updateCar/:id', upload.single('image'), carController.updateCar);
-router.delete('/deleteCar/:id', carController.deleteCar);
+router.get('/cars', carController.getAllCars);
+router.get('/cars/:id', carController.getCarById);
+router.post('/Cars', upload.single('image'), carController.createCar);
+router.put('/cars/:id', upload.single('image'), carController.updateCar);
+router.delete('/cars/:id', carController.deleteCar);
 
 export { router as carRoutes };
