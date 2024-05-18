@@ -2,7 +2,7 @@
 
 ## Guide to Run 
 * `npm i` to install all the dependencies
-* Don't forget to make your own `.env` based on `example.env`
+* Don't forget to make your own `.env`
 * When its finish:
     * `npm run build` to compile all these typescript things
     * `npm run dev` to run the server ⚡
@@ -21,11 +21,11 @@ https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br> <br>
 
 | API ENDPOINT              | METHOD   |     DESCRIPTION        |
 |---------------------------|----------|------------------------|
-| `api/v1/cms/api/cars`     |   `GET`  | Get All Data Cars      |
-| `api/v1/cms/api/cars/:id` |   `GET`  | Get By Id Data Cars    |
-| `api/v1/cms/api/cars/`    |  `POST`  | Create Data Cars       |
-| `api/v1/cms/api/cars/:id` |   `PUT`  | Update Data Cars By Id |
-| `api/v1/cms/api/cars/:id` | `DELETE` | Delete Data Cars By Id |
+| `api/v1/cms/api/cars`     |   `GET`  | Get All Cars Data      |
+| `api/v1/cms/api/cars/:id` |   `GET`  | Get By Id Cars Data    |
+| `api/v1/cms/api/cars/`    |  `POST`  | Create Cars Data       |
+| `api/v1/cms/api/cars/:id` |   `PUT`  | Update Cars Data By Id |
+| `api/v1/cms/api/cars/:id` | `DELETE` | Delete Cars Data By Id |
 
 ## REST API Endpoints
 -----------------------
