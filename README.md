@@ -1,328 +1,267 @@
+# Binar Car Rental
+
+## Guide to Run 
+* `npm i` to install all the dependencies
+* Don't forget to make your own `.env` based on `example.env`
+* When its finish:
+    * `npm run build` to compile all these typescript things
+    * `npm run dev` to run the server ⚡
+
+## About Migrations and Seeds
+* `knex migrate:latest` to run the migration's file
+* `knex seed:run` to fill data on database
+
+## Entity Relationship Diagram
+
+For now only one table is available: <br>
+https://dbdiagram.io/d/challenge_5-664307bc9e85a46d55c75833 <br>
+![Table Car](imagesforREADME/ERD-dbdiagram.png) <br>
 
 ## REST API Endpoints
-
 -----------------------
-### Get All Car
+### Get All Cars
 
-Mengembalikan array berisi data mobil dari database.
-
-#### *HTTP Request*
-> **GET**   
-> `/getAllCars`
-
-#### *Default Request URL*
-
-    http://localhost:9000/api/v1/cms/getAllCars
-
-#### *Expected Response*
-Response Code: `200`  
-Response Type: `application/json`
-Request Params:   
-
-    {
-    	"category": string,
-    	"name": string,
-    	"page": number,
-    	"pageSize": string,
-    }
-    
-Response Body:  
-
-    {
-    "status": 200,
-    "message": "Get all car data successfully",
-    "data": [
-        {
-            "id": "95e7d133-1600-4260-9e75-8606a56fb576",
-            "name": "BMW",
-            "category": "Medium",
-            "price": 10000,
-            "image": "https://auto2000.co.id/berita-dan-tips/_next/image?url=https%3A%2F%2Fastradigitaldigiroomuat.blob.core.windows.net%2Fstorage-uat-001%2Fmobil-offroad.jpg&w=1200&q=75",
-            "starRent": null,
-            "finishRent": null,
-            "createdAt": "2024-05-13T15:52:32.388Z",
-            "updatedAt": "2024-05-13T15:52:32.388Z"
-        },
-        {
-            "id": "3bf22e19-6616-443c-a671-a8fc27deb0f4",
-            "name": "Ferrari",
-            "category": "Small",
-            "price": 100.05,
-            "image": "https://auto2000.co.id/berita-dan-tips/_next/image?url=https%3A%2F%2Fastradigitaldigiroomuat.blob.core.windows.net%2Fstorage-uat-001%2Fmobil-offroad.jpg&w=1200&q=75",
-            "starRent": null,
-            "finishRent": null,
-            "createdAt": "2024-05-13T15:52:32.388Z",
-            "updatedAt": "2024-05-13T15:52:32.388Z"
-        },
-        {
-            "id": "832bf40f-06b0-4a48-b488-e8c60cdeef81",
-            "name": "Lamborghini",
-            "category": "large",
-            "price": 20000,
-            "image": "https://auto2000.co.id/berita-dan-tips/_next/image?url=https%3A%2F%2Fastradigitaldigiroomuat.blob.core.windows.net%2Fstorage-uat-001%2Fmobil-offroad.jpg&w=1200&q=75",
-            "starRent": null,
-            "finishRent": null,
-            "createdAt": "2024-05-13T15:52:32.388Z",
-            "updatedAt": "2024-05-13T15:52:32.388Z"
-        },
-        {
-            "id": "ac5bce16-25e0-4aef-ada5-55c03a9ae516",
-            "name": "Porsche",
-            "category": "Small",
-            "price": 30000,
-            "image": "https://auto2000.co.id/berita-dan-tips/_next/image?url=https%3A%2F%2Fastradigitaldigiroomuat.blob.core.windows.net%2Fstorage-uat-001%2Fmobil-offroad.jpg&w=1200&q=75",
-            "starRent": null,
-            "finishRent": null,
-            "createdAt": "2024-05-13T15:52:32.388Z",
-            "updatedAt": "2024-05-13T15:52:32.388Z"
-        },
-        {
-            "id": "5b6ab0cc-c8fa-4a24-980e-105e721b7916",
-            "name": "Audi",
-            "category": "large",
-            "price": 400.05,
-            "image": "https://auto2000.co.id/berita-dan-tips/_next/image?url=https%3A%2F%2Fastradigitaldigiroomuat.blob.core.windows.net%2Fstorage-uat-001%2Fmobil-offroad.jpg&w=1200&q=75",
-            "starRent": null,
-            "finishRent": null,
-            "createdAt": "2024-05-13T15:52:32.388Z",
-            "updatedAt": "2024-05-13T15:52:32.388Z"
-        },
-        {
-            "id": "f1db4b4a-873e-444b-8a7b-c70cbdae53c8",
-            "name": "Kijang",
-            "category": "small",
-            "price": 50.05,
-            "image": "https://auto2000.co.id/berita-dan-tips/_next/image?url=https%3A%2F%2Fastradigitaldigiroomuat.blob.core.windows.net%2Fstorage-uat-001%2Fmobil-offroad.jpg&w=1200&q=75",
-            "starRent": null,
-            "finishRent": null,
-            "createdAt": "2024-05-13T15:52:32.388Z",
-            "updatedAt": "2024-05-13T15:52:32.388Z"
-        },
-        {
-            "id": "18cd5c40-a801-49cd-8d83-f804f4fb0e65",
-            "name": "jeep",
-            "category": "large",
-            "price": 500000,
-            "image": "https://auto2000.co.id/berita-dan-tips/_next/image?url=https%3A%2F%2Fastradigitaldigiroomuat.blob.core.windows.net%2Fstorage-uat-001%2Fmobil-offroad.jpg&w=1200&q=75",
-            "starRent": null,
-            "finishRent": null,
-            "createdAt": "2024-05-13T15:52:32.388Z",
-            "updatedAt": "2024-05-13T15:52:32.388Z"
-        },
-        {
-            "id": "e4221d3e-be45-4829-b4cc-31f8e3b1ca05",
-            "name": "auwaw",
-            "category": "medium",
-            "price": 30000,
-            "image": "https://auto2000.co.id/berita-dan-tips/_next/image?url=https%3A%2F%2Fastradigitaldigiroomuat.blob.core.windows.net%2Fstorage-uat-001%2Fmobil-offroad.jpg&w=1200&q=75",
-            "starRent": null,
-            "finishRent": null,
-            "createdAt": "2024-05-13T15:52:32.388Z",
-            "updatedAt": "2024-05-13T15:52:32.388Z"
-        },
-        {
-            "id": "35da39bd-8541-4769-9c0e-a355e06baae9",
-            "name": "rsaa",
-            "category": "small",
-            "price": 30000,
-            "image": "https://auto2000.co.id/berita-dan-tips/_next/image?url=https%3A%2F%2Fastradigitaldigiroomuat.blob.core.windows.net%2Fstorage-uat-001%2Fmobil-offroad.jpg&w=1200&q=75",
-            "starRent": null,
-            "finishRent": null,
-            "createdAt": "2024-05-13T15:52:32.388Z",
-            "updatedAt": "2024-05-13T15:52:32.388Z"
-        },
-        {
-            "id": "654e2536-a0ed-4229-a2a6-3ec9dd1d9cf8",
-            "name": "tusk",
-            "category": "small",
-            "price": 40000,
-            "image": "https://auto2000.co.id/berita-dan-tips/_next/image?url=https%3A%2F%2Fastradigitaldigiroomuat.blob.core.windows.net%2Fstorage-uat-001%2Fmobil-offroad.jpg&w=1200&q=75",
-            "starRent": null,
-            "finishRent": null,
-            "createdAt": "2024-05-13T15:52:32.388Z",
-            "updatedAt": "2024-05-13T15:52:32.388Z"
-        },
-        {
-            "id": "ec16dc80-e9ae-4b38-a014-f24737905586",
-            "name": "ferrari",
-            "category": "large",
-            "price": 4000000,
-            "image": "https://auto2000.co.id/berita-dan-tips/_next/image?url=https%3A%2F%2Fastradigitaldigiroomuat.blob.core.windows.net%2Fstorage-uat-001%2Fmobil-offroad.jpg&w=1200&q=75",
-            "starRent": null,
-            "finishRent": null,
-            "createdAt": "2024-05-13T15:52:32.388Z",
-            "updatedAt": "2024-05-13T15:52:32.388Z"
-        }
-    ]
-}
-
+- **Show All Data Cars**
+    - **Request** 
+        - Endpoint : `/api/cars`
+        - method : `GET`
+    - **Get Data Success**
+        - cURL Request :
+          ```
+          curl -i --location 'http://localhost:9000/api/cars'
+          ```
+        - cURL Response :
+          ```
+          HTTP/1.1 200 OK
+          X-Powered-By: Express
+          Content-Type: application/json; charset=utf-8
+          Content-Length: 1578
+          ETag: W/"62a-gLb8gOcDaSFgSle5SRl90LssCM8"
+          Date: Fri, 17 May 2024 12:32:10 GMT
+          Connection: keep-alive
+          Keep-Alive: timeout=5
+          ```
 -----------------------
+### Get Car with ID
 
+- **Show Data Cars By Id**
+    - **Request** 
+        - Endpoint : `/api/cars/:id`
+        - Parameter: `:id`
+        - method : `GET`
+    - **Get Data Success**
+        - cURL Request :
+          ```
+          curl -i --location 'http://localhost:3000/api/cars/1'
+          ```
+        - cURL Response :
+          ```
+          HTTP/1.1 200 OK
+          X-Powered-By: Express
+          Content-Type: application/json; charset=utf-8
+          Content-Length: 376
+          ETag: W/"178-b6opYxiDk80e5+AAGPg4qX9nJLA"
+          Date: Fri, 17 May 2024 12:36:11 GMT
+          Connection: keep-alive
+          Keep-Alive: timeout=5
+            
+            {"status":true,"message":"Success Get Car By Id!","data":{"car":{"id":1,"name":"Honda Camry","price":50000000,"picture":"https://res.cloudinary.com/dfylrgzcu/image/upload/v1715849971/fsw/i9w2bvzhkv3n5h7suew3.jpg","start_rent":"2024-05-30T12:14:00.000Z","finish_rent":"2024-06-20T12:14:00.000Z","created_at":"2024-05-16T12:08:57.670Z","updated_at":"2024-05-16T08:59:28.000Z"}}}
+          ```
+    - **Get Data Not Found**
+        - cURL Request :
+          ```
+          curl -i --location 'http://localhost:3000/api/cars/15'
+          ```
+        - cURL Response :
+          ```
+          HTTP/1.1 404 Not Found
+          X-Powered-By: Express
+          Content-Type: application/json; charset=utf-8
+          Content-Length: 58
+          ETag: W/"3a-gTtqnTGREXP4BJs51/vy+a6TNb4"
+          Date: Fri, 17 May 2024 12:35:58 GMT
+          Connection: keep-alive
+          Keep-Alive: timeout=5
+            
+          {"status":false,"message":"Data Car Not Found!","data":{}}
+          ```
+-----------------------
 ### Create Car 
 
-Menambahkan data mobil baru ke database.
-
-#### *HTTP Request*
-> **POST**   
-> `/createCar`
-
-#### *Default Request URL*
-
-    http://localhost:9000/api/v1/cms/createCar
-
-#### *Expected Request*
-Request Type: `application/json`  
-Request Body:   
-
-    {
-    	"name": string,
-    	"category": string,
-    	"price": float,
-    	"image": file,
-    	"starRent": date,
-    	"finishRent": date,
-    }
-
-
-#### *Expected Response Success*
-Response Code: `201`   
-Response Type: `application/json`   
-Response Body:  
-
-    {
-    "status": 201,
-    "message": "Data Berhasil Disimpan",
-    "data": {
-        "id": "dc3e04c9-8716-47ae-93c4-2636b8898e7f",
-        "name": "test",
-        "category": "large",
-        "price": "300000",
-        "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1715665623/challenge_5/1715665615967_APIVeVtw..png",
-        "createdAt": "2024-05-14T05:47:04.368Z",
-        "updatedAt": "2024-05-14T05:47:04.368Z"
-    }
-}
-
-#### *Expected Response Failed*
-Response Code: `400`   
-Response Type: `application/json`   
-Response Body:  
-
-    {
-         "status": 400,
-         "message": "Hanya diperbolehkan untuk mengunggah file gambar (JPG, PNG)!"
-    }
-
-Response Body:  
-
-    {
-         "status": 400,
-         "message": "Unexpected field. Please check your file upload."
-    }
+- **Insert Data Cars**
+    - **Request**
+        - Endpoint : `/api/cars`
+        - Body : `form-data`
+        - Method : `POST`
+    - **Post Data Success**
+        - cURL Request :
+          ```
+          curl -i --location 'http://localhost:3000/api/cars' \
+          --form 'name="ERD Cars 2"' \
+          --form 'picture=@"/Users/hafidlh/Downloads/ERD_Cars_Table.png"' \
+          --form 'price=5000000' \
+          --form 'start_rent="2024-05-14 20:14:00"' \
+          --form 'finish_rent="2024-05-20 20:14:00"
+          ```
+        - cURL Response :
+          ```
+          HTTP/1.1 201 Created
+          X-Powered-By: Express
+          Content-Type: application/json; charset=utf-8
+          Content-Length: 47
+          ETag: W/"2f-LdQQAk62aBAQzFF4NIUb4PwDFZA"
+          Date: Fri, 17 May 2024 12:41:36 GMT
+          Connection: keep-alive
+          Keep-Alive: timeout=5
+            
+          {"status":true,"message":"Success Create Car!"}
+          ```
+    - **Post Data Failed Validation (price with string)**
+      - cURL Request :
+        ```
+        curl -i --location 'http://localhost:3000/api/cars' \
+        --form 'name="ERD Cars"' \
+        --form 'picture=@"/Users/hafidlh/Downloads/ERD_Cars_Table.png"' \
+        --form 'price="5000000"' \
+        --form 'start_rent="2024-05-14 20:14:00"' \
+        --form 'finish_rent="2024-05-20 20:14:00"'
+        ```
+      - cURL Response :
+        ```
+        HTTP/1.1 400 Bad Request
+        X-Powered-By: Express
+        Content-Type: application/json; charset=utf-8
+        Content-Length: 99
+        ETag: W/"63-nQr/u/GYe6C7h74yvdRsVjbj4o8"
+        Date: Fri, 17 May 2024 12:28:54 GMT
+        Connection: keep-alive
+        Keep-Alive: timeout=5
+        
+        {"status":false,"message":"Error Validation","data":{"validations":["\"price\" must be a number"]}}
+        ```
 -----------------------
 
 ### Edit Car Data with ID 
 
-Mengedit data car berdasarkan ID nya di database.
-
-#### *HTTP Request*
-> **PUT**   
-> `/api/v1/cms/updateCar/:id`
-
-#### *Default Request URL*
-
-    http://localhost:9000/api/v1/cms/updateCar/:id
-
-#### *Expected Request*
-Request Type: `application/json`   
-Request Body:   
-
-    {
-    	"name": string,
-    	"category": string,
-    	"price": number,
-    	"image": file,
-    	"starRent": date,
-    	"finishRent": date,
-    }
-
-
-#### *Expected Response*
-Response Code: `200`    
-Response Type: `application/json`   
-Response Body:   
-
-    {
-    	 "status": 200,
-         "message": "Car updated successfully",
-         "data": {
-                "id": "dc3e04c9-8716-47ae-93c4-2636b8898e7f",
-                "name": "test 2",
-                "category": "roro",
-                "price": "1010",
-                "image": "https://res.cloudinary.com/dmuuypm2t/image/upload/v1715666531/challenge_5/1715666520976_gU2xDHIx..png",
-                "starRent": null,
-                "finishRent": null,
-                "createdAt": "2024-05-14T05:47:04.368Z",
-                "updatedAt": "2024-05-14T06:02:11.509Z"
-        }
-    }
-
-#### *Expected Response Failed*
-Response Code: `400`   
-Response Type: `application/json` 
-Response Body:  
-    
-        {
-             "status": 404,
-             "message": "Car with the specified ID not found"
-        }
+- **Update Data Cars**
+    - **Request**
+        - Endpoint : `/api/cars/:id`
+        - Parameter : `:id`
+        - Body : `form-data`
+        - Method : `PUT`
+    - **Update Data Success**
+        - cURL Request :
+          ```
+          curl -i --location --request PUT 'http://localhost:3000/api/cars/1' \
+          --form 'name="Masserati"' \
+          --form 'price=6000000' \
+          --form 'start_rent="2024-05-30 20:14:00"' \
+          --form 'finish_rent="2024-06-20 20:14:00"' \
+          --form 'picture=@"/Users/hafidlh/Downloads/201904111201008597584.jpeg"'
+          ```
+        - cURL Response :
+          ```
+          HTTP/1.1 200 OK
+          X-Powered-By: Express
+          Content-Type: application/json; charset=utf-8
+          Content-Length: 45
+          ETag: W/"2d-cTE+Ikc4NElJjwc0HACja5VFHDo"
+          Date: Fri, 17 May 2024 12:49:11 GMT
+          Connection: keep-alive
+          Keep-Alive: timeout=5
+            
+          {"status":true,"message":"Success Edit Car!"}
+          ```
+    - **Update Data Failed Validation (price with string)**
+        - cURL Request :
+          ```
+          curl -i --location --request PUT 'http://localhost:3000/api/cars/1' \
+          --form 'name="Masserati"' \
+          --form 'price="6000000"' \
+          --form 'start_rent="2024-05-30 20:14:00"' \
+          --form 'finish_rent="2024-06-20 20:14:00"' \
+          --form 'picture=@"/Users/hafidlh/Downloads/201904111201008597584.jpeg"'
+          ```
+        - cURL Response :
+          ```
+          HTTP/1.1 400 Bad Request
+          X-Powered-By: Express
+          Content-Type: application/json; charset=utf-8
+          Content-Length: 99
+          ETag: W/"63-nQr/u/GYe6C7h74yvdRsVjbj4o8"
+          Date: Fri, 17 May 2024 12:52:03 GMT
+          Connection: keep-alive
+          Keep-Alive: timeout=5
         
-Response Body:  
-    
-        {
-             "status": 400,
-             "message": "Hanya diperbolehkan untuk mengunggah file gambar (JPG, PNG)!"
-        }
-    
-Response Body:  
-    
-        {
-             "status": 400,
-             "message": "Unexpected field. Please check your file upload."
-        }
+          {"status":false,"message":"Error Validation","data":{"validations":["\"price\" must be a number"]}}
+          ```
+    - **Update Data Failed Not Found**
+        - cURL Request :
+          ```
+          curl -i --location --request PUT 'http://localhost:3000/api/cars/15' \
+          --form 'name="Masserati"' \
+          --form 'price=6000000' \
+          --form 'start_rent="2024-05-30 20:14:00"' \
+          --form 'finish_rent="2024-06-20 20:14:00"' \
+          --form 'picture=@"/Users/hafidlh/Downloads/201904111201008597584.jpeg"'
+          ```
+        - cURL Response :
+          ```
+          HTTP/1.1 404 Not Found
+          X-Powered-By: Express
+          Content-Type: application/json; charset=utf-8
+          Content-Length: 58
+          ETag: W/"3a-gTtqnTGREXP4BJs51/vy+a6TNb4"
+          Date: Fri, 17 May 2024 12:55:34 GMT
+          Connection: keep-alive
+          Keep-Alive: timeout=5
+        
+          {"status":false,"message":"Data Car Not Found!","data":{}}
+          ```
 
 -----------------------
 ### Delete Car with ID
 
-Menghapus data car berdasarkan dengan ID dari database.
-
-#### *HTTP Request*
-> **DELETE**   
-> `deleteCar/:id`
-
-#### *Default Request URL*
-
-    http://localhost:9000/api/v1/cms/deleteCar/:id
-
-#### *Expected Response*
-Response Code: `200`   
-Response Type: `application/json`   
-Response Body:   
-
-    {
-         "status": 200,
-         "message": "Data Berhasil Dihapus"
-    }
-
-#### *Expected Response Failed*
-Response Code: `400`   
-Response Type: `application/json` 
-Response Body:  
-    
-        {
-             "status": 404,
-             "message": "Car with the specified ID not found"
-        }
+- **Delete Data Cars**
+    - **Request**
+        - Endpoint : `/api/cars/:id`
+        - Parameter : `:id`
+        - Method : `DELETE`
+    - **Delete Data Success**
+        - cURL Request :
+          ```
+          curl -i --location --request DELETE 'http://localhost:3000/api/cars/6'
+          ```
+        - cURL Response :
+          ```
+          HTTP/1.1 200 OK
+          X-Powered-By: Express
+          Content-Type: application/json; charset=utf-8
+          Content-Length: 47
+          ETag: W/"2f-VermmVfFxSAuCtushH6PQN5igHU"
+          Date: Fri, 17 May 2024 13:15:45 GMT
+          Connection: keep-alive
+          Keep-Alive: timeout=5
+            
+          {"status":true,"message":"Success Delete Car!"}
+          ```
+    - **Delete Data Not Found**
+       - cURL Request :
+         ```
+         curl -i --location --request DELETE 'http://localhost:3000/api/cars/7'
+         ```
+       - cURL Response :
+         ```
+         HTTP/1.1 404 Not Found
+         X-Powered-By: Express
+         Content-Type: application/json; charset=utf-8
+         Content-Length: 58
+         ETag: W/"3a-gTtqnTGREXP4BJs51/vy+a6TNb4"
+         Date: Fri, 17 May 2024 13:17:55 GMT
+         Connection: keep-alive
+         Keep-Alive: timeout=5
+            
+         {"status":false,"message":"Data Car Not Found!","data":{}}
+         ```
 
 -----------------------
