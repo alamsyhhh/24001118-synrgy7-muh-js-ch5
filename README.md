@@ -2,7 +2,7 @@
 
 ## Guide to Run 
 * `npm i` to install all the dependencies
-* Don't forget to make your own `.env`
+* Don't forget to make your own `.env` based on `example.env`
 * When its finish:
     * `npm run build` to compile all these typescript things
     * `npm run dev` to run the server ⚡
